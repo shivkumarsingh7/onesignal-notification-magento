@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <cbcore translate="label" module="cbcore">
+            <label>CB Extensions</label>
+            <sort_order>10</sort_order>
+            <class>cb-block</class>
+        </cbcore>
+    </tabs>
+    <sections>
+        <cbstore>
+            <class>separator-top</class>
+            <header_css>cb-header</header_css>
+            <label>CB Extensions</label>
+            <tab>cbcore</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+<!--                <extensions translate="label">
+                    <label>CB Extensions Store</label>
+                    <frontend_model>cbcore/system_config_info</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </extensions>-->
+                <extension translate="label">
+                    <label>CB Extensions Store</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>cbcore/system_config_form_fieldset_store</frontend_model>
+                    <sort_order>11</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </extension>
+            </groups>
+        </cbstore>
+    </sections>
+</config>

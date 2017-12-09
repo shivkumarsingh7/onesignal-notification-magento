@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+        /**
+        * ConversionBug
+        *
+        * Do not edit or add to this file if you wish to upgrade this extension to newer
+        * version in the future.
+        *
+        * @category 	ConversionBug
+        * @package 	ConversionBug_Onesignal
+        * @copyright 	Copyright (c) 2015 ConversionBug (http://www.ConversionBug.com/)
+        * @license 	http://www.ConversionBug.com/license-agreement.html
+        * @author  shiv kumar singh
+        * @email shivam.kumar@conversionbug.com
+        */
+-->
+<config>
+    <acl>
+        <resources>
+            <all>Allow everything</all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <onesignal>
+                                        <title>Onesignal Notifications</title>
+                                        <sort_order>60</sort_order>
+                                    </onesignal>
+                                    <onesignal_notification>
+                                        <title>Push Onesignal Notifications</title>
+                                        <sort_order>61</sort_order>
+                                    </onesignal_notification>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

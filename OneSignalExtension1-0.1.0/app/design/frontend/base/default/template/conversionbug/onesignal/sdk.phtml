@@ -1,0 +1,87 @@
+<?php
+    /**
+     * ConversionBug
+     *
+     * Do not edit or add to this file if you wish to upgrade this extension to newer
+     * version in the future.
+     *
+     * @category 	ConversionBug
+     * @package 	ConversionBug_Onesignal
+     * @copyright 	Copyright (c) 2015 ConversionBug (http://www.ConversionBug.com/)
+     * @license 	http://www.ConversionBug.com/license-agreement.html
+     * @author  shiv kumar singh
+     * @email shivam.kumar@conversionbug.com
+     */
+?>
+<?php $helper = Mage::helper('cbonesignal'); ?>
+<?php if ($helper->isEnable()): ?>
+    <?php $storeId = Mage::app()->getStore()->getStoreId(); ?>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        var OneSignal = OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_GENERAL_APPID, $storeId);?>",
+            <?php if(Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_GENERAL_SSL, $storeId)== 0):?>
+            subdomainName: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_GENERAL_SUBDOMAIN, $storeId);?>",
+            <?php endif;?>
+            autoRegister: <?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_GENERAL_AUTOREGISTER, $storeId);?>,
+            safari_web_id: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_GENERAL_SAFARI_WEB_ID, $storeId);?>",
+            notifyButton: {
+                enable: <?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_GENERAL_NOTIFYBUTTON, $storeId);?>, // Required to use the notify button
+                size: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_ICON_SIZE, $storeId);?>", // One of 'small', 'medium', or 'large'
+                theme: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_ICON_THEME, $storeId);?>", // One of 'default' (red-white) or 'inverse" (white-red)
+                position: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_ICON_POSITION, $storeId);?>", // Either 'bottom-left' or 'bottom-right'
+                offset: {
+                    bottom: '0px',
+                    left: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_ICON_LEFT, $storeId);?>px", // Only applied if bottom-left
+                    right: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_ICON_RIGHT, $storeId);?>px" // Only applied if bottom-right
+                },
+                prenotify: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_ICON_PRENOTIFY, $storeId);?>", // Show an icon with 1 unread message for first-time site visitors
+                showCredit: false, // Hide the OneSignal logo
+                text: {
+                    'tip.state.unsubscribed': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_TIP_STATE_UNSUBSCRIBED, $storeId);?>",
+                    'tip.state.subscribed': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_TIP_STATE_SUBSCRIBED, $storeId);?>",
+                    'tip.state.blocked': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_TIP_STATE_BLOCKED, $storeId);?>",
+                    'message.prenotify': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_MESSAGE_PRENOTIFY, $storeId);?>",
+                    'message.action.subscribed': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_MESSAGE_ACTION_SUBSCRIBED, $storeId);?>",
+                    'message.action.resubscribed': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_MESSAGE_ACTION_RESUBSCRIBED, $storeId);?>",
+                    'message.action.unsubscribed': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_MESSAGE_ACTION_UNSUBSCRIBED, $storeId);?>",
+                    'dialog.main.title': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_DIALOG_MAIN_TITLE, $storeId);?>",
+                    'dialog.main.button.subscribe': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_DIALOG_MAIN_BUTTON_SUBSCRIBE, $storeId);?>",
+                    'dialog.main.button.unsubscribe': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_DIALOG_MAIN_BUTTON_UNSUBSCRIBE, $storeId);?>",
+                    'dialog.blocked.title': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_DIALOG_BLOCKED_TITLE, $storeId);?>",
+                    'dialog.blocked.message': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_TEXT_DIALOG_BLOCKED_MESSAGE, $storeId);?>"
+                }, colors: { // Customize the colors of the main button and dialog popup button
+                    'circle.background': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_CIRCLE_BACKGROUND, $storeId);?>",
+                    'circle.foreground': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_CIRCLE_FOREGROUND, $storeId);?>",
+                    'badge.background': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_BADGE_BACKGROUND, $storeId);?>",
+                    'badge.foreground': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_BADGE_FOREGROUND, $storeId);?>",
+                    'badge.bordercolor': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_BADGE_BORDERCOLOR, $storeId);?>",
+                    'pulse.color': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_PULSE_COLOR, $storeId);?>",
+                    'dialog.button.background.hovering': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_DIALOG_HOVERING, $storeId);?>",
+                    'dialog.button.background.active': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_DIALOG_ACTIVE, $storeId);?>",
+                    'dialog.button.background': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_DIALOG_BACKGROUND, $storeId);?>",
+                    'dialog.button.foreground': "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_COLOR_DIALOG_FOREGROUND, $storeId);?>"
+                },
+
+            },
+            promptOptions: {
+                showCredit: false, // Hide Powered by OneSignal
+                actionMessage: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_ACTIONMESSAGE, $storeId);?>",
+                exampleNotificationTitleDesktop: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_EXAMPLENOTIFICATIONTITLEDESKTOP, $storeId);?>",
+                exampleNotificationMessageDesktop: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_EXAMPLENOTIFICATIONMESSAGEDESKTOP, $storeId);?>",
+                exampleNotificationTitleMobile: " <?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_EXAMPLENOTIFICATIONTITLEMOBILE, $storeId);?>",
+                exampleNotificationMessageMobile: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_EXAMPLENOTIFICATIONMESSAGEMOBILE, $storeId);?>",
+                exampleNotificationCaption: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_EXAMPLENOTIFICATIONCAPTION, $storeId);?>",
+                acceptButtonText: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_ACCEPTBUTTONTEXT, $storeId);?>".toUpperCase(),
+                cancelButtonText: "<?php echo Mage::getStoreConfig(ConversionBug_Onesignal_Helper_Data::XML_CONFIG_PATH_ONESIGNAL_PROMPT_CANCELBUTTONTEXT, $storeId);?>".toUpperCase()
+            }
+        }]);
+        OneSignal.push( function() {
+            OneSignal.setDefaultNotificationUrl("<?php echo $this->getBaseUrl()?>");
+        });
+        //]]>
+    </script>
+<?php endif; ?>

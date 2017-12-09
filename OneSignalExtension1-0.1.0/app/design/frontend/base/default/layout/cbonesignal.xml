@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="core/text_list" name="before_head_end" as="before_head_end"/>
+        </reference>
+        <reference name="before_head_end">
+            <block type="core/template" name="onesignal.js" template="conversionbug/onesignal/sdk.phtml" />
+        </reference>
+    </default>
+</layout> 

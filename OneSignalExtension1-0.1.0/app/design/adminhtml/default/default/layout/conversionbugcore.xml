@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <name>conversionbug/core/core.css</name>
+            </action>
+        </reference>
+    </default>
+    <adminhtml_system_config_edit>
+        <reference name="content">
+            <block type="cbcore/info" name="cbcore.info" template="conversionbugcore/info.phtml"></block>
+        </reference>
+    </adminhtml_system_config_edit>
+</layout>

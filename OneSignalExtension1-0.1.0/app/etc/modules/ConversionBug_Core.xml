@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ConversionBug
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the ConversionBug.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.ConversionBug.com/license-agreement.html
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category 	ConversionBug
+ * @package 	ConversionBug_Core
+ * @copyright 	Copyright (c) 2015 ConversionBug (http://www.ConversionBug.com/)
+ * @license 	http://www.ConversionBug.com/license-agreement.html
+ * @author  shiv kumar singh
+ * @email shivam.kumar@conversionbug.com
+ */
+-->
+<config>
+    <modules>
+        <ConversionBug_Core>
+            <active>true</active>
+            <codePool>local</codePool>
+        </ConversionBug_Core>
+    </modules>
+</config>

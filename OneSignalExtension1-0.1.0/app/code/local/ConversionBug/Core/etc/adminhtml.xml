@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <all>Allow everything</all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <cbstore translate="title" module="cbcore">
+                                        <title>CB Extensions</title> 
+                                        <sort_order>60</sort_order>
+                                    </cbstore>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package>
+    <name>ConversionBug_Onesignal</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>One signal extension helps your user subscribe to all your updates in just a click. The pain of entering details for subscribing to your notifications is no longer there. You can monitor the conversion of your notifications in real time and create personalized notifications for your target segment. To drive a better conversion rate you can schedule it be delivered to each user at the ideal time of day. The extension aims to boost your engagement and help you to attain higher sales.</summary>
+    <description>One Signal Extension&#xD;
+&#xD;
+One signal extension helps your user subscribe to all your updates in just a click. The pain of entering details for subscribing to your notifications is no longer there. You can monitor the conversion of your notifications in real time and create personalized notifications for your target segment. To drive a better conversion rate you can schedule it be delivered to each user at the ideal time of day. The extension aims to boost your engagement and help you to attain higher sales.&#xD;
+&#xD;
+How to use this extension for higher conversions?&#xD;
+&#xD;
+One signal extension allows you to have your subscription option a click away which means that user can have all your updates in just a click. You no longer need to be worried if the update is landing in user&#x2019;s inbox or not. Also, your visitor is assured that he would no longer be spammed. The ability to time and personalize it will help you to act according to your target segment which will result in multiplication of your sales figures.&#xD;
+&#xD;
+Special features of the one signal extension&#xD;
+&#xD;
+    Designed to increase user experience &amp; sales&#xD;
+    Real time conversation analytics&#xD;
+    Hassle-free integration&#xD;
+    Highly scalable&#xD;
+&#xD;
+    Designed to increase user experience &amp; sales&#xD;
+&#xD;
+    One Signal extension helps your customers to avoid the pain of entering any details. It helps your user to easily subscribe to your notification service in a click and allowing you successfully run campaigns for higher conversion.&#xD;
+    Real time conversion analytics&#xD;
+&#xD;
+    Real time conversion analytics&#xD;
+    Hassle- free integration&#xD;
+&#xD;
+    The extension can be easily integrated on the store either via Magento connect manager or via FileZilla. It&#x2019;s as easy as integrating any other extension of the store.&#xD;
+    Highly Scalable&#xD;
+&#xD;
+    This extension has the ability to support millions of your users as it supports all the major web browsers.</description>
+    <notes>first release</notes>
+    <authors><author><name>shiv kumar singh</name><user>shivam</user><email>shivam.kumar@conversionbug.com</email></author></authors>
+    <date>2016-06-07</date>
+    <time>06:52:22</time>
+    <contents><target name="magelocal"><dir name="ConversionBug"><dir name="Onesignal"><dir name="Helper"><file name="Data.php" hash="a3964952a1f8da4a60b1fbf6c0ee607d"/></dir><dir name="Model"><file name="Json.php" hash="05a21040bb50b83943adde72eb9894d6"/><file name="Send.php" hash="f718c0a7b9ac52e5311a2e7cb620a6ab"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d85ee92ea841e6d858cc3c2e98f817ee"/><file name="config.xml" hash="55e78cd422eb00bb7950862f5798d2d9"/><file name="system.xml" hash="ed4c5806b9ed99b2f164bc3cd77b80d8"/></dir><file name=".DS_Store" hash="60850b2e9347d4e9e3d5c294b1818eab"/></dir><dir name="Core"><dir name="Block"><file name="Info.php" hash="90e4c31958204ac9e40b2293c6372296"/><dir name="System"><dir name="Config"><dir name="Form"><dir name="Fieldset"><file name="Store.php" hash="15df9afac0ea33498b03ad544e0bc8c5"/></dir></dir><file name="Info.php" hash="a0601dea3e6e7d3c3f7f4ac7544dd249"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="fd937326042c8165a1df0faca629db7f"/></dir><dir name="Model"><file name="Feed.php" hash="9266834784c19c05f6cf06a3acc69acc"/><dir name="System"><dir name="Config"><dir name="Source"><dir name="Comment"><file name="Appid.php" hash="d513afe7a1595391578230d0f024d1a4"/><file name="Gcm.php" hash="cf032e47d065c5063950a4ce151c638c"/><file name="Safari.php" hash="975795af7ed9804b4b7bdc3b399afe83"/></dir><file name="Display.php" hash="fd271787952e4f1b1ce98a0a68cb37cb"/><file name="Footer.php" hash="7c13df78247e0cc2fe1e11ddff2cdcdf"/><file name="Options.php" hash="a26a31999e38a540292ff24e5ed33428"/><file name="Position.php" hash="ce9df3d1f5aa32346a04da1d867f1b99"/><file name="Size.php" hash="aaa740e24ce82ee119af928f3cc9c95c"/><file name="Theme.php" hash="ca8d1eb9dd32fd4201a3a305cf58429a"/></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="7164e6536faa45bccbf4a09bc6fba886"/><file name="config.xml" hash="bc7f95f1e3ec6a3e7e373b67b562e95c"/><file name="system.xml" hash="8371de258efa47ceff95e858c6c09603"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="ConversionBug_Onesignal.xml" hash="f0d8392d925045b375430e763fec9b02"/><file name="ConversionBug_Core.xml" hash="537de773791fc95a5a3e340de82162f7"/></dir></target><target name="magedesign"><dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cbonesignal.xml" hash="e689eda0486dcd7e918f5e9d5ed1d676"/></dir><dir name="template"><dir name="conversionbug"><dir name="onesignal"><file name="sdk.phtml" hash="b956db9dcc67a1497ce32597ce4fdb1a"/><file name=".DS_Store" hash="194577a7e20bdcc7afbb718f502c134c"/></dir></dir></dir></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="conversionbugcore.xml" hash="12ae2f9f2a96093fcefd593fed15e7b3"/></dir><dir name="template"><dir name="conversionbugcore"><file name="info.phtml" hash="4099f81b6ea49b517ef4354fd8bcb0a2"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="conversionbug"><dir name="core"><file name="core.css" hash="0de5de9197bef03e862f09091acf3147"/><dir name="images"><file name="cb_pattern.png" hash="9c5044bebc10bc6a34aa6a1e8e41b54a"/><file name="favicon.png" hash="bab36888d2974803acc518fc6e80c0a8"/><file name="logo.jpg" hash="04b873540f127f3db2702ec81537a92c"/><file name="onesignal.png" hash="cd0a13c160d15090f2a7cc24e82adb94"/></dir><file name=".DS_Store" hash="81c7b110dc744add1c8adfe8d840f168"/></dir><file name=".DS_Store" hash="297c9b375eea4ebfba476c4e7eea7a2b"/></dir></dir></dir></dir></target><target name="magemedia"><dir name="import"><file name="product.csv" hash="fe4db0faa97e0181d36109d73e2a709d"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

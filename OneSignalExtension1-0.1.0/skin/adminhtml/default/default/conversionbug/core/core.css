@@ -1,0 +1,17 @@
+.cb-block dl > dt.label{background: #d1dedf url("images/logo.jpg") no-repeat scroll 0px -1px;padding-left: 50px;text-indent: -999em;}
+.cb-intro{background:rgb(25,25,25);height:162px;}
+.cb-pattern{background: url("images/cb_pattern.png") no-repeat;height: 162px;width:39%;float:right}
+.cb-intro .content{float:left;width:56%;padding:10px 10px 10px 30px;color:white;}
+h3.cb-header{background: transparent url("images/favicon.png") no-repeat scroll 0 0;height: 37px;overflow: hidden;padding: 0;text-indent: -9999px;width: 120px;display:none;}
+.cbstore-block .item-extensions {float: left;margin: 0 0 0 70px;min-height: 400px;padding: 24px 0;width: 17%;}
+.cbstore-block .item-extensions .image img {width: 175px;}
+.cbstore-block .item-extensions .title {border-bottom: 1px solid #ededed;margin: 0 0 15px;padding: 31px 0 17px;text-align: center;}
+.cbstore-block .item-extensions .title a {color: #545454;display: block;font-family: Arial;font-size: 16px;font-weight: bold;max-height: 57px;min-height: 57px;overflow: hidden;text-decoration: none;}
+.cbstore-block .item-extensions .title a:hover {color: #d4022e;}
+.cbstore-block .item-extensions .price {color: #000000;font-size: 20px;font-weight: bold;text-align: center;}
+.cbstore-block .store-extensions-header {border-bottom: 1px dashed #dddddd;font-family: Arial;font-size: 1.6666em;line-height: 1.25em;margin-left: 70px;padding-bottom: 30px;padding-top: 7px;}
+.cbonesignal span {
+    background:url("images/onesignal.png") no-repeat scroll 0 !important;
+    margin-left: 20px !important;
+    padding-left: 28px !important;
+}

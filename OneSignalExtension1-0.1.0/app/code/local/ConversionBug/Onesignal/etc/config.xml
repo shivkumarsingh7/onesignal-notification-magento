@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+        /**
+        * ConversionBug
+        *
+        * Do not edit or add to this file if you wish to upgrade this extension to newer
+        * version in the future.
+        *
+        * @category 	ConversionBug
+        * @package 	ConversionBug_Onesignal
+        * @copyright 	Copyright (c) 2015 ConversionBug (http://www.ConversionBug.com/)
+        * @license 	http://www.ConversionBug.com/license-agreement.html
+        * @author  shiv kumar singh
+        * @email shivam.kumar@conversionbug.com
+        */
+-->
+<config>
+    <modules>
+        <ConversionBug_Onesignal>
+            <version>0.1.0</version>
+        </ConversionBug_Onesignal>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <cbonesignal>
+                    <file>cbonesignal.xml</file>
+                </cbonesignal>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <helpers>
+            <cbonesignal>
+                <class>ConversionBug_Onesignal_Helper</class>
+            </cbonesignal>
+        </helpers>
+        <models>
+            <cbonesignal>
+                <class>ConversionBug_Onesignal_Model</class>
+            </cbonesignal>
+        </models>
+        <events>
+            <admin_system_config_changed_section_onesignal_notification>
+                <observers>
+                    <mymodule>
+                        <type>singleton</type>
+                        <class>ConversionBug_Onesignal_Model_Send</class>
+                        <method>send</method>
+                    </mymodule>
+                </observers>
+            </admin_system_config_changed_section_onesignal_notification>
+        </events>
+    </global>
+    <default>
+        <onesignal>
+            <text>
+                <tip_state_unsubscribed>Subscribe to notifications</tip_state_unsubscribed>
+                <tip_state_subscribed>You're subscribed to notifications</tip_state_subscribed>
+                <tip_state_blocked>You've blocked notifications</tip_state_blocked>
+                <message_prenotify>Click to subscribe to notifications</message_prenotify>
+                <message_action_subscribed>Thanks for subscribing!</message_action_subscribed>
+                <message_action_resubscribed>You're subscribed to notifications</message_action_resubscribed>
+                <message_action_unsubscribed>You won't receive notifications again</message_action_unsubscribed>
+                <dialog_main_title>Manage Site Notifications</dialog_main_title>
+                <dialog_main_button_subscribe>SUBSCRIBE</dialog_main_button_subscribe>
+                <dialog_main_button_unsubscribe>UNSUBSCRIBE</dialog_main_button_unsubscribe>
+                <dialog_blocked_title>Unblock Notifications</dialog_blocked_title>
+                <dialog_blocked_message>Follow these instructions to allow notifications:</dialog_blocked_message>
+            </text>
+            <color>
+                <circle_background>rgb(84,110,123)</circle_background>
+                <circle_foreground>white</circle_foreground>
+                <badge_background>rgb(84,110,123)</badge_background>
+                <badge_foreground>white</badge_foreground>
+                <badge_bordercolor>white</badge_bordercolor>
+                <pulse_color>white</pulse_color>
+                <dialog_hovering>rgb(77, 101, 113)</dialog_hovering>
+                <dialog_active>rgb(70, 92, 103)</dialog_active>
+                <dialog_background>rgb(84,110,123)</dialog_background>
+                <dialog_foreground>white</dialog_foreground>
+            </color>
+            <prompt>
+                <actionmessage>wants to show notifications</actionmessage>
+                <examplenotificationtitledesktop>This is an example notification</examplenotificationtitledesktop>
+                <examplenotificationmessagedesktop>Notifications will appear on your desktop</examplenotificationmessagedesktop>
+                <examplenotificationtitlemobile> Example notification</examplenotificationtitlemobile>
+                <examplenotificationmessagemobile>Notifications will appear on your device</examplenotificationmessagemobile>
+                <examplenotificationcaption>(you can unsubscribe anytime)</examplenotificationcaption>
+                <acceptbuttontext>Continue</acceptbuttontext>
+                <cancelbuttontext>No Thanks</cancelbuttontext>
+            </prompt>
+        </onesignal>
+    </default>
+</config>

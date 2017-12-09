@@ -1,0 +1,43 @@
+<script type="text/javascript">
+//<![CDATA[
+    jQuery(document).ready(function ($) {
+        $('.content-header').remove();
+    });
+</script>
+<div class="cbstore-block">
+<!--<h3 class="store-extensions-header"><?php echo $this->__('Featured Extensions') ?></h3>-->
+    <div class="cb-intro">
+        <div class="content">
+            <h1>CONVERSIONbug</h1>
+            <p>We want to change the way you look at your website</p>
+            <p><span>Visit Us: </span><a href="http://www.conversionbug.com/">www.conversionbug.com</a></p>
+            <p><span>Contact Us: </span><a href="mailto:support@conversionbug.com">support@conversionbug.com</a></p>
+            <p><span>Skype: </span><a href="#">conversionbug</a></p>
+        </div>
+        <div class="cb-pattern"></div>
+    </div>
+    <?php
+    $collection = $this->getExtensions();
+//echo "<pre>";print_r($collection);
+    ?>
+
+    <?php $i = 0;
+    foreach ($collection as $product): ?>
+    <?php if ($i == 0) {
+        $i++;
+        continue;
+    } ?>	
+        <div class="item-extensions">
+            <div class="image">
+                <a href="<?php echo $product[0] ?>" target="_blank"><img src="<?php echo $product[1] ?>"/></a>
+            </div>
+            <div class="title">
+                <a href="<?php echo $product[0] ?>" target="_blank"><?php echo $product[2] ?></a>
+            </div>
+            <div class="price">$<?php echo $product[3] ?></div>
+        </div>
+    <?php ++$i; ?>
+<?php endforeach; ?>
+</div>
+
+
